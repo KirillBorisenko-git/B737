@@ -21,4 +21,7 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/tests', testsRoutes);
 app.use('/api/assignments', assignmentsRoutes);
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
